@@ -6,34 +6,18 @@ const entryPath = path.join(process.cwd(), 'src');
 const outputPath = path.join(process.cwd(), 'build');
 
 module.exports = {
-	devtool: 'source-map',
-	entry: {
-		app: path.join(entryPath, 'app.tsx')
-	},
+	entry: './src/app.tsx',
 	output: {
 		path: outputPath,
 		filename: 'bundle.js',
 		publicPath: '/static/'
 	},
 	resolve: {
-		extensions: [".ts", ".tsx", ".js"]
+		extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
 	},
 	module: {
-		rules: [
-			{
-				test: /\.(tsx)?$/,
-				loader: "awesome-typescript-loader"
-			}
-		],
 		loaders: [
-			{
-				test: /\.js/,
-				loaders: ['babel'],
-				include: path.join(__dirname, 'src')
-			}
+			{ test: /\.tsx?$/, loader: 'ts-loader' }
 		]
-	},
-	plugins: [
-		new CheckerPlugin()
-	]
+	}
 };

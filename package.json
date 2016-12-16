@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline",
+    "start": "webpack-dev-server --hot --inline --display-error-details",
     "build": "webpack"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "html-webpack-plugin": "^2.24.1",
+    "ts-loader": "^1.3.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
