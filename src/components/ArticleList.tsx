@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {Article} from './Article'
 
-export default function ArticleList(props) {
+export default function ArticleList(props: {articles: IArticle[]}) {
     const {articles} = props;
     const articleElements = articles.map(
         article => <li key={article.id}><Article article={article}/></li>

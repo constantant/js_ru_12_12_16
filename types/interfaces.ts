@@ -12,7 +12,7 @@ interface IArticle {
     date: string,
     title: string,
     text: string,
-    comments: IComment[]
+    comments?: IComment[]
 }
 
 interface ICommentListProps {
@@ -20,7 +20,6 @@ interface ICommentListProps {
 }
 
 interface ICommentListScope {
-
 }
 
 interface ICommentProps {
