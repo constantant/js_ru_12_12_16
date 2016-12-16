@@ -5,6 +5,6 @@ import ArticleList from './components/ArticleList';
 import {articles} from './fixtures';
 
 ReactDOM.render(
-    <ArticleList articles={articles}/>,
+    <ArticleList articles={articles as IArticle[]}/>,
     document.getElementById('container')
 );
