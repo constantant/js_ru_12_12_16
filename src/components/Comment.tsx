@@ -1,9 +1,8 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import {Component} from 'react';
 
 export class Comment extends Component<ICommentProps, ICommentScope> {
-	render() {
+	public render() {
 		const {user, text} = this.props.data;
 		return (
 			<li>

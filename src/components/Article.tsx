@@ -1,17 +1,15 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-
 import {Component} from 'react';
 import {CommentList} from './CommentList';
 
 export class Article extends Component<IArticleProps, IArticleScope> {
 
-    state = {
+    public state = {
         isOpen: false,
         commentsIsShown: false
     };
 
-    render() {
+    public render() {
         const {article} = this.props;
         return (
             <div>
@@ -21,19 +19,19 @@ export class Article extends Component<IArticleProps, IArticleScope> {
         )
     }
 
-    toggleOpen() {
+    public toggleOpen() {
         this.setState({
             isOpen: !this.state.isOpen
         })
-    };
+    }
 
-    toggleComments() {
+    public toggleComments() {
         this.setState({
             commentsIsShown: !this.state.commentsIsShown
         })
     }
 
-    getBody() {
+    public getBody() {
         if (!this.state.isOpen) {
             return null;
         }
@@ -49,7 +47,7 @@ export class Article extends Component<IArticleProps, IArticleScope> {
         )
     }
 
-    getButton() {
+    public getButton() {
         const comments = this.props.article.comments;
 
         if (
@@ -63,7 +61,7 @@ export class Article extends Component<IArticleProps, IArticleScope> {
         return <button onClick={() => this.toggleComments()}>{text} ({comments.length})</button>
     }
 
-    getComments() {
+    public getComments() {
         if (!this.state.commentsIsShown) {
             return null;
         }

@@ -18,14 +18,18 @@ interface IArticle {
 interface ICommentListProps {
     comments: IComment[]
 }
+
 interface ICommentListScope {
 
 }
+
 interface ICommentProps {
     data: IComment
 }
+
 interface ICommentScope {
 }
+
 interface IComment {
     id: number,
     user: string,
