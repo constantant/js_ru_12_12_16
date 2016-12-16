@@ -1,10 +1,12 @@
-import React from 'react'
-import Article from './Article'
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+import {Article} from './Article'
 
 export default function ArticleList(props) {
-    const { articles } = props;
+    const {articles} = props;
     const articleElements = articles.map(
-        article => <li key = {article.id}><Article article = {article} /></li>
+        article => <li key={article.id}><Article article={article}/></li>
     );
     return (
         <div>
