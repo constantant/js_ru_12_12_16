@@ -1,12 +1,10 @@
 const path = require('path');
 
-const {CheckerPlugin} = require('awesome-typescript-loader');
-
 const entryPath = path.join(process.cwd(), 'src');
 const outputPath = path.join(process.cwd(), 'build');
 
 module.exports = {
-	entry: './src/app.tsx',
+	entry: path.join(entryPath, 'app.tsx'),
 	output: {
 		path: outputPath,
 		filename: 'bundle.js',
