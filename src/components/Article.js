@@ -5,6 +5,7 @@ export default class Article extends Component {
 
 	state = {
 		isOpen: false,
+	        //лучше внести этот стейт в CommentList, иначе компонент выходит очень прегруженным
 		commentsIsShown: false
 	};
 
