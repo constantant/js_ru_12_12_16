@@ -5,7 +5,7 @@ export default {
         }
     },
     toggleOpen: function(ev) {
-        ev && ev.preventDefault && ev.preventDefault()
+        ev && ev.preventDefault && ev.preventDefault();
         this.setState({
             isOpen: !this.state.isOpen
         })
