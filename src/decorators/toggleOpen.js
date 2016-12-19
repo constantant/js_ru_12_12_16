@@ -1,5 +1,5 @@
 //decorator === HOC(Higher Order Component)
-import React, {PropTypes} from 'react'
+import React from 'react'
 
 export default function toggleOpen(Component) {
     return class WrapperComponent extends React.Component {
