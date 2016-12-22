@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import CommentList from '../CommentList'
+import CommentForm from '../CommentForm'
 import CSSTransition from 'react-addons-css-transition-group'
 import './style.css'
 
@@ -8,7 +9,7 @@ export default class Article extends Component {
         article: PropTypes.object.isRequired,
         isOpen: PropTypes.bool,
         onClick: PropTypes.func
-    }
+    };
 
     componentDidMount() {
 //        console.log('---', this.refs.container)
@@ -46,6 +47,7 @@ export default class Article extends Component {
             <section>
                 {this.props.article.text}
                 <CommentList comments = {this.props.article.comments} />
+                <CommentForm/>
             </section>
         )
     }
