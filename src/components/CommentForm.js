@@ -44,7 +44,7 @@ export default class CommentForm extends Component {
 		ev.preventDefault();
 		this.isValid() && this.sendComment();
 	}
-
+	//для этого onSubmit достаточно
 	onKeyDownComment(ev){
 		if(ev.keyCode===13 && !ev.shiftKey) {
 			ev.preventDefault();
