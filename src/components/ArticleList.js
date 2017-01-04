@@ -28,7 +28,6 @@ class ArticleList extends React.Component {
 
     getArticleRef = (article) => {
         this.article = article
-        console.log('---', findDOMNode(article))
     }
 }
 
@@ -41,7 +40,7 @@ ArticleList.propTypes = {
 export default connect(
     (state) => {
         return {
-            articles: state.articles
+            articles: state.filteredArticles || state.articles
         }
     }
 )(accordion(ArticleList))
