@@ -5,6 +5,7 @@ export default (articlesState, action) => {
     const { type, payload } = action
 
     switch (type) {
+            //не делай фильтрацию здесь. просто храни значения фильтров. А пофильтруешь уже в коннекте
         case FILTER_ARTICLE:
             const {from, to, ids} = payload;
             return articles.filter(article => {
