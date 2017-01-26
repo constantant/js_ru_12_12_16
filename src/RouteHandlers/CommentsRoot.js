@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import ArticleList from '../components/ArticleList'
+import CommentsPaginator from '../components/CommentsPaginator'
 
-class ArticleListRoute extends Component {
+class CommentRoot extends Component {
     static propTypes = {
 
     };
@@ -9,12 +9,12 @@ class ArticleListRoute extends Component {
     render() {
         return (
             <div>
-                <ArticleList />
+                <h1>Comments pagination</h1>
                 {this.props.children}
-                {this.props.article}
+                <CommentsPaginator />
             </div>
         )
     }
 }
 
-export default ArticleListRoute
+export default CommentRoot

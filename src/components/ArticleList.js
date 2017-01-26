@@ -6,6 +6,7 @@ import accordion from '../decorators/accordion'
 import { connect } from 'react-redux'
 import { mapToArray } from '../helpers'
 import { loadAllArticles } from '../AC'
+import LocalizedText from './LocalizedText'
 
 class ArticleList extends React.Component {
     componentDidMount() {
@@ -16,12 +17,12 @@ class ArticleList extends React.Component {
         const {articles, loading, isOpenItem, toggleOpenItem} = this.props
         const articleElements = articles.map(article =>
             <li key={article.id}>
-                <Link to={`/articles/${article.id}`}>{article.title}</Link>
+                <Link to={`/articles/${article.id}`} activeStyle={{color: 'red'}}>{article.title}</Link>
             </li>)
         const loader = loading && <Loader />
         return (
             <div>
-                <h2>Article List</h2>
+                <h2><LocalizedText text="Article List" /></h2>
                 <ul>
                     {/*some comment*/}
                     {articleElements}
